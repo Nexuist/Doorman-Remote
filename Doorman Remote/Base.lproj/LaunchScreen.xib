@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rounded_corners" translatesAutoresizingMaskIntoConstraints="NO" id="kLZ-K6-1im">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="QRK-gg-KvV"/>
+                        <constraint firstAttribute="height" constant="70" id="hO9-94-KvU"/>
+                        <constraint firstAttribute="width" secondItem="kLZ-K6-1im" secondAttribute="height" multiplier="1:1" id="mFR-Hh-ueR"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="mFR-Hh-ueR"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="kLZ-K6-1im" secondAttribute="centerY" id="0SX-oh-VL9"/>
+                <constraint firstAttribute="trailing" secondItem="kLZ-K6-1im" secondAttribute="trailing" constant="60" id="By1-tq-pND"/>
+                <constraint firstItem="kLZ-K6-1im" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="Fsf-O4-kVM"/>
+                <constraint firstAttribute="centerX" secondItem="kLZ-K6-1im" secondAttribute="centerX" id="Qyi-WD-J1S"/>
+                <constraint firstItem="kLZ-K6-1im" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="184" id="lcd-rN-EYY"/>
+                <constraint firstAttribute="bottom" secondItem="kLZ-K6-1im" secondAttribute="bottom" constant="184" id="vsr-tw-bxi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="By1-tq-pND"/>
+                    <exclude reference="Fsf-O4-kVM"/>
+                    <exclude reference="lcd-rN-EYY"/>
+                    <exclude reference="vsr-tw-bxi"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rounded_corners" width="120" height="120"/>
+    </resources>
+</document>
