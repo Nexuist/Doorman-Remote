@@ -8,11 +8,17 @@
 
 import UIKit
 
+/*
+	The purpose of this view controller is to connect to the server and gather metrics before moving on to the main view controller.
+	If an error occurs, an alert view will be shown to notify the user of the problem.
+	The configure button can be pressed to set server URL, username, and key values in a persistent manner.
+*/
+
 class Loading: UIViewController {
-    
+
     let manager = Manager.sharedInstance
-    var show: ((UIAlertController) -> Void)!
-    
+    var show: ((UIAlertController) -> Void)! // Helper closure to show alerts
+
     override func viewDidLoad() {
         super.viewDidLoad()
         show = { (alert: UIAlertController) in
@@ -29,14 +35,14 @@ class Loading: UIViewController {
             setCredentials()
         }
     }
-    
+
     func setCredentials() {
         let alert = manager.configureAlert(completionHandler: { (UIAlertAction) in
             self.show(self.manager.reloadAlert(message: "Please exit and open the app again."))
         })
         self.show(alert)
     }
-    
+
     func metadata(data: Data?, response: URLResponse?, error: NSError?) {
         if (error == nil && ((response as? HTTPURLResponse)?.statusCode == 200)) {
             DispatchQueue.main.async(execute: {
@@ -58,11 +64,11 @@ class Loading: UIViewController {
             self.show(self.manager.reloadAlert(message: "Couldn't connect to server!"))
         }
     }
-    
+
     @IBAction func configureRequested() {
         self.show(self.manager.configureAlert(completionHandler: nil))
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         let dest = segue.destinationViewController as! Main
         dest.metrics = sender! as! [String : AnyObject]

@@ -6,21 +6,20 @@
 //  Copyright © 2016 Deplex. All rights reserved.
 //
 
-////  Streaming components made possible with much assistance from Jeff McFadden (http://jeff.mcfadden.io/articles/handling-motion-jpeg-streams-on-ios/ )
 
 import UIKit
 import LocalAuthentication
 
 class Main: UIViewController {
-    
+
     var metrics: [String: AnyObject] = [:]
-    let manager = Manager()
-    
+    let manager = Manager.sharedInstance
+
     @IBOutlet weak var deniedAttemptsLabel: UILabel!
     @IBOutlet weak var lastOpenedLabel: UILabel!
     @IBOutlet weak var cam: MJPEGImageView!
     @IBOutlet weak var blur: UIVisualEffectView!
-    
+
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true
         cam.onLoad = {
@@ -29,6 +28,7 @@ class Main: UIViewController {
             }
         }
         cam.stream(request: manager.prepareRequest(path: "/cam")!)
+				// Present metrics
         let door = (metrics["lastOpenedDoor"] as! String).capitalized
         let user = metrics["lastOpenedBy"]!
         let timestamp = Double(metrics["lastOpenedAt"]!.stringValue)!
@@ -39,7 +39,7 @@ class Main: UIViewController {
         lastOpenedLabel.text = "\(door) door opened by \(user) on \(time)"
         deniedAttemptsLabel.text = "\(deniedAttempts) denied authentication attempt(s)."
     }
-    
+
     @IBAction func toggleRequested(_ sender: UIBarButtonItem) {
         let context = LAContext()
         if (context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics
@@ -53,8 +53,8 @@ class Main: UIViewController {
             })
         }
     }
-    
-    func leaving() {
+
+    deinit {
         cam.stop()
     }
 }
