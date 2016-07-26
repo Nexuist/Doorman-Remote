@@ -1,6 +1,5 @@
 //
 //  Manager.swift
-//  Garage
 //
 //  Created by Andi Andreas on 7/15/16.
 //  Copyright © 2016 Deplex. All rights reserved.
@@ -9,12 +8,12 @@
 import Foundation
 
 class Manager {
-    
+
     static let sharedInstance = Manager()
     let get = { (key: String) in
         return UserDefaults.standard().string(forKey: key)
     }
-    
+
     func prepareRequest(path: String) -> URLRequest? {
         if let server = get("server"), user = get("user"), key = get("key") {
             let url = URL(string: server + path)
@@ -27,14 +26,14 @@ class Manager {
             return nil
         }
     }
-    
+
     func reloadAlert(message: String) -> UIAlertController {
         let alert = UIAlertController(title: "Reload", message: message, preferredStyle: .alert)
         let quit = UIAlertAction(title: "Close", style: .default, handler: nil)
         alert.addAction(quit)
         return alert
     }
-    
+
     func configureAlert(completionHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
         let alert = UIAlertController(title: "Credentials", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField) in

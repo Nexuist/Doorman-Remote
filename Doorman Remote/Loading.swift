@@ -1,6 +1,5 @@
 //
 //  Loading.swift
-//  Garage
 //
 //  Created by Andi Andreas on 7/13/16.
 //  Copyright © 2016 Deplex. All rights reserved.
