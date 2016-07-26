@@ -14,6 +14,10 @@ Because you're not likely to be using Doorman Remote frequently (how often do yo
 
 ### Screenshots
 
+![Door closed](Screenshots/1.png)
+![Toggling door](Screenshots/2.png)
+![Door open](Screenshots/3.png)
+
 ###### Previous Version
 
 This is not the first version of Doorman Remote (it is the first public one, however). Here are screenshots of a previous version.
