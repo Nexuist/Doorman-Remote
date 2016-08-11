@@ -27,7 +27,7 @@
         <!--Load-->
         <scene sceneID="xaj-x5-9rZ">
             <objects>
-                <viewController id="Ujz-hU-TIJ" userLabel="Load" customClass="Loading" customModule="Garage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ujz-hU-TIJ" userLabel="Load" customClass="Loading" customModule="Doorman_Remote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dcy-S9-ile"/>
                         <viewControllerLayoutGuide type="bottom" id="CD0-cD-QeP"/>
@@ -85,7 +85,7 @@
         <!--Garage-->
         <scene sceneID="tzg-rx-Jmq">
             <objects>
-                <viewController id="Nzi-uk-6QR" customClass="Main" customModule="Garage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nzi-uk-6QR" customClass="Main" customModule="Doorman_Remote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2j-b4-kzi"/>
                         <viewControllerLayoutGuide type="bottom" id="6t3-WO-oa7"/>
@@ -94,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-GI-zVD" customClass="MJPEGImageView" customModule="Garage" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GarageCam" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-GI-zVD" customClass="MJPEGImageView" customModule="Doorman_Remote" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VVr-GI-zVD" secondAttribute="height" multiplier="16:9" constant="8.6666666666666856" id="umd-Wh-2pn"/>
                                 </constraints>
@@ -194,7 +194,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="House" width="2448" height="3264"/>
+        <image name="GarageCam" width="341" height="224"/>
         <image name="rounded_corners" width="120" height="120"/>
     </resources>
 </document>
