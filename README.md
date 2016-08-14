@@ -14,21 +14,21 @@ Because you're not likely to be using Doorman Remote frequently (how often do yo
 
 ### Screenshots
 
-![Loading screen](Screenshots/1.png)
+<img src = "Screenshots/1.png" alt = "Loading screen" width = "220px" />
 
-![Main screen](Screenshots/2.png)
+<img src = "Screenshots/2.png" alt = "Main screen" width = "220px" />
 
-![Toggling door](Screenshots/3.png)
+<img src = "Screenshots/3.png" alt = "Toggling door" width = "220px" />
 
 ###### Previous Version
 
 This is not the first version of Doorman Remote (it is the first public one, however). Here are screenshots of a previous version.
 
-![Door closed](Screenshots/Previous/1.png)
+<img src = "Screenshots/Previous/1.png" alt = "Door closed" width = "220px" />
 
-![Toggling door](Screenshots/Previous/2.png)
+<img src = "Screenshots/Previous/2.png" alt = "Toggling door" width = "220px" />
 
-![Door open](Screenshots/Previous/3.png)
+<img src = "Screenshots/Previous/3.png" alt = "Door open" width = "220px" />
 
 ### License
 
